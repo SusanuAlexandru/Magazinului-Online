@@ -633,6 +633,7 @@ class Container implements ArrayAccess, ContainerContract
      */
     protected function rebound($abstract)
     {
+<<<<<<< HEAD
         if (! $callbacks = $this->getReboundCallbacks($abstract)) {
             return;
         }
@@ -640,6 +641,11 @@ class Container implements ArrayAccess, ContainerContract
         $instance = $this->make($abstract);
 
         foreach ($callbacks as $callback) {
+=======
+        $instance = $this->make($abstract);
+
+        foreach ($this->getReboundCallbacks($abstract) as $callback) {
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             $callback($this, $instance);
         }
     }

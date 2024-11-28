@@ -91,6 +91,7 @@ class Number
     }
 
     /**
+<<<<<<< HEAD
      * Spell out the given number in the given locale in ordinal form.
      *
      * @param  int|float  $number
@@ -109,6 +110,8 @@ class Number
     }
 
     /**
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * Convert the given number to its percentage equivalent.
      *
      * @param  int|float  $number

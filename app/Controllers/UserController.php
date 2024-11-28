@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use App\Models\User;
+<<<<<<< HEAD
 use App\Models\Category;
 
 class UserController
@@ -14,12 +15,23 @@ class UserController
     {
         ob_start();
         require_once '../views/users/login.view.php';
+=======
+
+class UserController
+{
+    // Înregistrare utilizator
+    public function registerUser(Request $request, Response $response)
+    {
+        ob_start();
+        require '../views/register.view.php';
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         $html = ob_get_clean();
         $response->getBody()->write($html);
         return $response;
     }
 
     // Autentificare utilizator
+<<<<<<< HEAD
     public function authenticate(Request $request, Response $response)
     {
         $data = $request->getParsedBody();
@@ -149,16 +161,53 @@ class UserController
         // Dacă sunt categoriile disponibile, le trimitem în view
         ob_start();
         require_once '../views/users/nav.view.php'; // Trimite datele la view
+=======
+    public function loginUser(Request $request, Response $response)
+    {
+        ob_start();
+        require '../views/login.view.php';
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         $html = ob_get_clean();
         $response->getBody()->write($html);
         return $response;
     }
 
     // Deconectare utilizator
+<<<<<<< HEAD
     public function logout(Request $request, Response $response)
     {
         session_start();
         session_destroy();
         return $response->withHeader('Location', '/login')->withStatus(302);
     }
+=======
+    public function logoutUser(Request $request, Response $response)
+    {
+        // Logica de deconectare
+        return $response->withHeader('Location', '/login')->withStatus(302);
+    }
+
+    // Vizualizare profil utilizator
+    public function getUserProfile(Request $request, Response $response)
+    {
+        $user = User::find($request->getAttribute('user_id'));
+        ob_start();
+        require '../views/profile.view.php';
+        $html = ob_get_clean();
+        $response->getBody()->write($html);
+        return $response;
+    }
+
+    // Actualizare profil utilizator
+    public function updateUserProfile(Request $request, Response $response)
+    {
+        $data = $request->getParsedBody();
+        $user = User::find($request->getAttribute('user_id'));
+        $user->update($data);
+
+        return $response
+            ->withHeader('Location', '/profile')
+            ->withStatus(302);
+    }
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
 }

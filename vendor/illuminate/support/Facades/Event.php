@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Testing\Fakes\EventFake;
 
 /**
+<<<<<<< HEAD
  * @method static void listen(\Illuminate\Events\QueuedClosure|callable|array|string $events, \Illuminate\Events\QueuedClosure|callable|array|string|null $listener = null)
+=======
+ * @method static void listen(\Illuminate\Events\QueuedClosure|\Closure|string|array $events, \Illuminate\Events\QueuedClosure|\Closure|string|array|null $listener = null)
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
  * @method static bool hasListeners(string $eventName)
  * @method static bool hasWildcardListeners(string $eventName)
  * @method static void push(string $event, object|array $payload = [])

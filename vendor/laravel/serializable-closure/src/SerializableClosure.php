@@ -4,6 +4,10 @@ namespace Laravel\SerializableClosure;
 
 use Closure;
 use Laravel\SerializableClosure\Exceptions\InvalidSignatureException;
+<<<<<<< HEAD
+=======
+use Laravel\SerializableClosure\Exceptions\PhpVersionNotSupportedException;
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
 use Laravel\SerializableClosure\Serializers\Signed;
 use Laravel\SerializableClosure\Signers\Hmac;
 
@@ -24,6 +28,13 @@ class SerializableClosure
      */
     public function __construct(Closure $closure)
     {
+<<<<<<< HEAD
+=======
+        if (\PHP_VERSION_ID < 70400) {
+            throw new PhpVersionNotSupportedException();
+        }
+
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         $this->serializable = Serializers\Signed::$signer
             ? new Serializers\Signed($closure)
             : new Serializers\Native($closure);
@@ -36,6 +47,13 @@ class SerializableClosure
      */
     public function __invoke()
     {
+<<<<<<< HEAD
+=======
+        if (\PHP_VERSION_ID < 70400) {
+            throw new PhpVersionNotSupportedException();
+        }
+
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         return call_user_func_array($this->serializable, func_get_args());
     }
 
@@ -46,6 +64,13 @@ class SerializableClosure
      */
     public function getClosure()
     {
+<<<<<<< HEAD
+=======
+        if (\PHP_VERSION_ID < 70400) {
+            throw new PhpVersionNotSupportedException();
+        }
+
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         return $this->serializable->getClosure();
     }
 
@@ -98,7 +123,11 @@ class SerializableClosure
     /**
      * Get the serializable representation of the closure.
      *
+<<<<<<< HEAD
      * @return array{serializable: \Laravel\SerializableClosure\Serializers\Signed|\Laravel\SerializableClosure\Contracts\Serializable}
+=======
+     * @return array
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      */
     public function __serialize()
     {
@@ -110,7 +139,11 @@ class SerializableClosure
     /**
      * Restore the closure after serialization.
      *
+<<<<<<< HEAD
      * @param  array{serializable: \Laravel\SerializableClosure\Serializers\Signed|\Laravel\SerializableClosure\Contracts\Serializable}  $data
+=======
+     * @param  array  $data
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * @return void
      *
      * @throws \Laravel\SerializableClosure\Exceptions\InvalidSignatureException

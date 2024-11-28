@@ -52,6 +52,7 @@ class MorphToMany extends BelongsToMany
      * @param  bool  $inverse
      * @return void
      */
+<<<<<<< HEAD
     public function __construct(
         Builder $query,
         Model $parent,
@@ -64,6 +65,11 @@ class MorphToMany extends BelongsToMany
         $relationName = null,
         $inverse = false,
     ) {
+=======
+    public function __construct(Builder $query, Model $parent, $name, $table, $foreignPivotKey,
+                                $relatedPivotKey, $parentKey, $relatedKey, $relationName = null, $inverse = false)
+    {
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         $this->inverse = $inverse;
         $this->morphType = $name.'_type';
         $this->morphClass = $inverse ? $query->getModel()->getMorphClass() : $parent->getMorphClass();

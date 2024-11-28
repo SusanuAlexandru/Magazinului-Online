@@ -680,6 +680,7 @@ class ReflectionClosure extends ReflectionFunction
         $this->isBindingRequired = $isUsingThisObject;
         $this->isScopeRequired = $isUsingScope;
 
+<<<<<<< HEAD
         $attributesCode = array_map(function ($attribute) {
             $arguments = $attribute->getArguments();
 
@@ -699,6 +700,29 @@ class ReflectionClosure extends ReflectionFunction
 
         if (! empty($attributesCode)) {
             $code = implode("\n", array_merge($attributesCode, [$code]));
+=======
+        if (PHP_VERSION_ID >= 80100) {
+            $attributesCode = array_map(function ($attribute) {
+                $arguments = $attribute->getArguments();
+
+                $name = $attribute->getName();
+                $arguments = implode(', ', array_map(function ($argument, $key) {
+                    $argument = sprintf("'%s'", str_replace("'", "\\'", $argument));
+
+                    if (is_string($key)) {
+                        $argument = sprintf('%s: %s', $key, $argument);
+                    }
+
+                    return $argument;
+                }, $arguments, array_keys($arguments)));
+
+                return "#[$name($arguments)]";
+            }, $this->getAttributes());
+
+            if (! empty($attributesCode)) {
+                $code = implode("\n", array_merge($attributesCode, [$code]));
+            }
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         }
 
         $this->code = $code;
@@ -713,7 +737,29 @@ class ReflectionClosure extends ReflectionFunction
      */
     protected static function getBuiltinTypes()
     {
+<<<<<<< HEAD
         return ['array', 'callable', 'string', 'int', 'bool', 'float', 'iterable', 'void', 'object', 'mixed', 'false', 'null', 'never'];
+=======
+        // PHP 8.1
+        if (PHP_VERSION_ID >= 80100) {
+            return ['array', 'callable', 'string', 'int', 'bool', 'float', 'iterable', 'void', 'object', 'mixed', 'false', 'null', 'never'];
+        }
+
+        // PHP 8
+        if (\PHP_MAJOR_VERSION === 8) {
+            return ['array', 'callable', 'string', 'int', 'bool', 'float', 'iterable', 'void', 'object', 'mixed', 'false', 'null'];
+        }
+
+        // PHP 7
+        switch (\PHP_MINOR_VERSION) {
+            case 0:
+                return ['array', 'callable', 'string', 'int', 'bool', 'float'];
+            case 1:
+                return ['array', 'callable', 'string', 'int', 'bool', 'float', 'iterable', 'void'];
+            default:
+                return ['array', 'callable', 'string', 'int', 'bool', 'float', 'iterable', 'void', 'object'];
+        }
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     }
 
     /**
@@ -1149,6 +1195,7 @@ class ReflectionClosure extends ReflectionFunction
     {
         $ns = $this->getNamespaceName();
 
+<<<<<<< HEAD
         $name = $this->getName();
 
         // First class callables...
@@ -1157,6 +1204,10 @@ class ReflectionClosure extends ReflectionFunction
             && ! str_contains($name, '{closure:\\')
             && empty($ns)
             && ! is_null($this->getClosureScopeClass())) {
+=======
+        // First class callables...
+        if ($this->getName() !== '{closure}' && empty($ns) && ! is_null($this->getClosureScopeClass())) {
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             $ns = $this->getClosureScopeClass()->getNamespaceName();
         }
 

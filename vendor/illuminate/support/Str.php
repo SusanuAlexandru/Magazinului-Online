@@ -119,7 +119,11 @@ class Str
      */
     public static function ascii($value, $language = 'en')
     {
+<<<<<<< HEAD
         return ASCII::to_ascii((string) $value, $language, replace_single_chars_only: false);
+=======
+        return ASCII::to_ascii((string) $value, $language);
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     }
 
     /**

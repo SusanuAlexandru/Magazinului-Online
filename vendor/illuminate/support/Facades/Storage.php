@@ -45,7 +45,10 @@ use Illuminate\Filesystem\Filesystem;
  * @method static bool makeDirectory(string $path)
  * @method static bool deleteDirectory(string $directory)
  * @method static \Illuminate\Filesystem\FilesystemAdapter assertExists(string|array $path, string|null $content = null)
+<<<<<<< HEAD
  * @method static \Illuminate\Filesystem\FilesystemAdapter assertCount(string $path, int $count, bool $recursive = false)
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
  * @method static \Illuminate\Filesystem\FilesystemAdapter assertMissing(string|array $path)
  * @method static \Illuminate\Filesystem\FilesystemAdapter assertDirectoryEmpty(string $path)
  * @method static bool missing(string $path)

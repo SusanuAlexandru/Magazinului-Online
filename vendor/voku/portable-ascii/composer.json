@@ -12,7 +12,11 @@
     "authors": [
         {
             "name": "Lars Moelleken",
+<<<<<<< HEAD
             "homepage": "https://www.moelleken.org/"
+=======
+            "homepage": "http://www.moelleken.org/"
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         }
     ],
     "require": {

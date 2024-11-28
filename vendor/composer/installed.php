@@ -1,19 +1,33 @@
 <?php return array(
     'root' => array(
+<<<<<<< HEAD
         'name' => 'aaw/magazin',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
         'reference' => '0886e28a8fbf95726ce076abb2b650ca575615a1',
+=======
+        'name' => 'aww/magazin_online',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+<<<<<<< HEAD
         'aaw/magazin' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
             'reference' => '0886e28a8fbf95726ce076abb2b650ca575615a1',
+=======
+        'aww/magazin_online' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -56,53 +70,88 @@
             'dev_requirement' => false,
         ),
         'illuminate/collections' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
             'reference' => 'fd8a4b0a0785155233250671ceb0e5f488b535df',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+            'reference' => 'a01a9d0799700bf34ab3797988fdd5f420d42bfe',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/collections',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'illuminate/conditionable' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
             'reference' => '911df1bda950a3b799cf80671764e34eede131c6',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+            'reference' => '362dd761b9920367bca1427a902158225e9e3a23',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/conditionable',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'illuminate/container' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
             'reference' => 'b057b0bbb38d7c7524df1ca5c38e7318f4c64d26',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+            'reference' => '6e31eb49e9c9e68356a55cd8f18fb8830b8158cd',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/container',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'illuminate/contracts' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
             'reference' => '184317f701ba20ca265e36808ed54b75b115972d',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+            'reference' => '44c15aec6ea0d997e0885aa5b04876fe8a141433',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/contracts',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'illuminate/database' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
             'reference' => 'f08bb9ffa1d829cb6f8bb713e5c9cd3a47636ff2',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+            'reference' => 'ec28ddf74daf6e4450fefd70e5b339514af2da2e',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/database',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'illuminate/macroable' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'reference' => 'e1cb9e51b9ed5d3c9bc1ab431d0a52fe42a990ed',
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/macroable',
@@ -110,18 +159,30 @@
             'dev_requirement' => false,
         ),
         'illuminate/support' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v11.34.0',
             'version' => '11.34.0.0',
             'reference' => '9b6b4f0d97b6af5b9232ab4e512181917df979a4',
+=======
+            'pretty_version' => 'v11.32.0',
+            'version' => '11.32.0.0',
+            'reference' => '213bc04ed2a75dac441e602df4568154c36a3670',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../illuminate/support',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'laravel/serializable-closure' => array(
+<<<<<<< HEAD
             'pretty_version' => 'v2.0.0',
             'version' => '2.0.0.0',
             'reference' => '0d8d3d8086984996df86596a86dea60398093a81',
+=======
+            'pretty_version' => 'v1.3.6',
+            'version' => '1.3.6.0',
+            'reference' => 'f865a58ea3a0107c336b7045104c75243fa59d96',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../laravel/serializable-closure',
             'aliases' => array(),
@@ -335,9 +396,15 @@
             ),
         ),
         'voku/portable-ascii' => array(
+<<<<<<< HEAD
             'pretty_version' => '2.0.3',
             'version' => '2.0.3.0',
             'reference' => 'b1d923f88091c6bf09699efcd7c8a1b1bfd7351d',
+=======
+            'pretty_version' => '2.0.1',
+            'version' => '2.0.1.0',
+            'reference' => 'b56450eed252f6801410d810c8e1727224ae0743',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
             'type' => 'library',
             'install_path' => __DIR__ . '/../voku/portable-ascii',
             'aliases' => array(),

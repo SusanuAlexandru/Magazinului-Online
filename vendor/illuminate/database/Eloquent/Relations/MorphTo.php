@@ -26,6 +26,7 @@ class MorphTo extends BelongsTo
     protected $morphType;
 
     /**
+<<<<<<< HEAD
      * The associated key on the parent model.
      *
      * @var string|null
@@ -33,6 +34,8 @@ class MorphTo extends BelongsTo
     protected $ownerKey;
 
     /**
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * The models whose relations are being eager loaded.
      *
      * @var \Illuminate\Database\Eloquent\Collection<int, TDeclaringModel>
@@ -80,7 +83,11 @@ class MorphTo extends BelongsTo
      * @param  \Illuminate\Database\Eloquent\Builder<TRelatedModel>  $query
      * @param  TDeclaringModel  $parent
      * @param  string  $foreignKey
+<<<<<<< HEAD
      * @param  string|null  $ownerKey
+=======
+     * @param  string  $ownerKey
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * @param  string  $type
      * @param  string  $relation
      * @return void
@@ -93,7 +100,10 @@ class MorphTo extends BelongsTo
     }
 
     /** @inheritDoc */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     public function addEagerConstraints(array $models)
     {
         $this->buildDictionary($this->models = Collection::make($models));
@@ -200,7 +210,10 @@ class MorphTo extends BelongsTo
     }
 
     /** @inheritDoc */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     public function match(array $models, Collection $results, $relation)
     {
         return $models;
@@ -232,7 +245,10 @@ class MorphTo extends BelongsTo
      * @param  TRelatedModel|null  $model
      * @return TDeclaringModel
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     public function associate($model)
     {
         if ($model instanceof Model) {
@@ -257,7 +273,10 @@ class MorphTo extends BelongsTo
      *
      * @return TDeclaringModel
      */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     public function dissociate()
     {
         $this->parent->setAttribute($this->foreignKey, null);
@@ -267,8 +286,16 @@ class MorphTo extends BelongsTo
         return $this->parent->setRelation($this->relationName, null);
     }
 
+<<<<<<< HEAD
     /** @inheritDoc */
     #[\Override]
+=======
+    /**
+     * Touch all of the related models for the relationship.
+     *
+     * @return void
+     */
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     public function touch()
     {
         if (! is_null($this->getParentKey())) {
@@ -277,7 +304,10 @@ class MorphTo extends BelongsTo
     }
 
     /** @inheritDoc */
+<<<<<<< HEAD
     #[\Override]
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     protected function newRelatedInstanceFor(Model $parent)
     {
         return $parent->{$this->getRelationName()}()->getRelated()->newInstance();
@@ -414,6 +444,7 @@ class MorphTo extends BelongsTo
         return $query;
     }
 
+<<<<<<< HEAD
     /** @inheritDoc */
     #[\Override]
     public function getQualifiedOwnerKeyName()
@@ -425,6 +456,8 @@ class MorphTo extends BelongsTo
         return parent::getQualifiedOwnerKeyName();
     }
 
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     /**
      * Handle dynamic method calls to the relationship.
      *

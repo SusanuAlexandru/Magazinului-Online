@@ -5,7 +5,11 @@ $capsule=new Capsule();
 $capsule->addConnection([
     'driver' => 'mysql',
     'host' => 'localhost',
+<<<<<<< HEAD
     'database' => 'magazin_sport',
+=======
+    'database' => 'onlinemagazin',
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     'username'=> 'root',
     'password'=> '',
     'chrest' => 'utf8',

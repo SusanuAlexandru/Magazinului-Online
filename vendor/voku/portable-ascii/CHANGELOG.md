@@ -1,5 +1,6 @@
 # Changelog
 
+<<<<<<< HEAD
 ### 2.0.3 (2024-11-21)
 
 - use modern phpdocs e.g. list<int> or conditional-return annotations 
@@ -8,6 +9,8 @@
 
 - small fix for PHP 8.4 (thanks to @gilbertoalbino)
 
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
 ### 2.0.1 (2022-03-08)
 
 - "To people of Russia": There is a war in Ukraine right now. The forces of the Russian Federation are attacking civilians.

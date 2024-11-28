@@ -151,6 +151,7 @@ class BelongsToMany extends Relation
      * @param  string|null  $relationName
      * @return void
      */
+<<<<<<< HEAD
     public function __construct(
         Builder $query,
         Model $parent,
@@ -161,6 +162,11 @@ class BelongsToMany extends Relation
         $relatedKey,
         $relationName = null,
     ) {
+=======
+    public function __construct(Builder $query, Model $parent, $table, $foreignPivotKey,
+                                $relatedPivotKey, $parentKey, $relatedKey, $relationName = null)
+    {
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         $this->parentKey = $parentKey;
         $this->relatedKey = $relatedKey;
         $this->relationName = $relationName;

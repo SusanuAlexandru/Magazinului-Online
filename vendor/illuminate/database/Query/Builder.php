@@ -256,11 +256,18 @@ class Builder implements BuilderContract
      * @param  \Illuminate\Database\Query\Processors\Processor|null  $processor
      * @return void
      */
+<<<<<<< HEAD
     public function __construct(
         ConnectionInterface $connection,
         ?Grammar $grammar = null,
         ?Processor $processor = null,
     ) {
+=======
+    public function __construct(ConnectionInterface $connection,
+                                ?Grammar $grammar = null,
+                                ?Processor $processor = null)
+    {
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         $this->connection = $connection;
         $this->grammar = $grammar ?: $connection->getQueryGrammar();
         $this->processor = $processor ?: $connection->getPostProcessor();
@@ -3110,7 +3117,11 @@ class Builder implements BuilderContract
      * Execute the query as a "select" statement.
      *
      * @param  array|string  $columns
+<<<<<<< HEAD
      * @return \Illuminate\Support\Collection<int, \stdClass>
+=======
+     * @return \Illuminate\Support\Collection
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      */
     public function get($columns = ['*'])
     {
@@ -3340,7 +3351,11 @@ class Builder implements BuilderContract
     /**
      * Get a lazy collection for the given query.
      *
+<<<<<<< HEAD
      * @return \Illuminate\Support\LazyCollection<int, \stdClass>
+=======
+     * @return \Illuminate\Support\LazyCollection
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      */
     public function cursor()
     {

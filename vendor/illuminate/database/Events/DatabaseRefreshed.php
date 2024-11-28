@@ -15,7 +15,11 @@ class DatabaseRefreshed implements MigrationEventContract
      */
     public function __construct(
         public ?string $database = null,
+<<<<<<< HEAD
         public bool $seeding = false,
+=======
+        public bool $seeding = false
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     ) {
         //
     }

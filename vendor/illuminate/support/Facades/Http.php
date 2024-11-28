@@ -14,7 +14,11 @@ use Illuminate\Http\Client\Factory;
  * @method static \Illuminate\Http\Client\ResponseSequence sequence(array $responses = [])
  * @method static bool preventingStrayRequests()
  * @method static \Illuminate\Http\Client\Factory allowStrayRequests()
+<<<<<<< HEAD
  * @method static void recordRequestResponsePair(\Illuminate\Http\Client\Request $request, \Illuminate\Http\Client\Response|null $response)
+=======
+ * @method static void recordRequestResponsePair(\Illuminate\Http\Client\Request $request, \Illuminate\Http\Client\Response $response)
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
  * @method static void assertSent(callable $callback)
  * @method static void assertSentInOrder(array $callbacks)
  * @method static void assertNotSent(callable $callback)

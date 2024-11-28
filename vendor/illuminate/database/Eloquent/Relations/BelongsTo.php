@@ -96,9 +96,15 @@ class BelongsTo extends Relation
             // For belongs to relationships, which are essentially the inverse of has one
             // or has many relationships, we need to actually query on the primary key
             // of the related models matching on the foreign key that's on a parent.
+<<<<<<< HEAD
             $key = $this->getQualifiedOwnerKeyName();
 
             $this->query->where($key, '=', $this->getForeignKeyFrom($this->child));
+=======
+            $table = $this->related->getTable();
+
+            $this->query->where($table.'.'.$this->ownerKey, '=', $this->getForeignKeyFrom($this->child));
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
         }
     }
 
@@ -108,7 +114,11 @@ class BelongsTo extends Relation
         // We'll grab the primary key name of the related models since it could be set to
         // a non-standard name and not "id". We will then construct the constraint for
         // our eagerly loading query so it returns the proper models from execution.
+<<<<<<< HEAD
         $key = $this->getQualifiedOwnerKeyName();
+=======
+        $key = $this->related->getTable().'.'.$this->ownerKey;
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
 
         $whereIn = $this->whereInMethod($this->related, $this->ownerKey);
 

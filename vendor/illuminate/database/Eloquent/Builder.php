@@ -1081,6 +1081,7 @@ class Builder implements BuilderContract
     }
 
     /**
+<<<<<<< HEAD
      * Save a new model and return the instance without raising model events.
      *
      * @param  array  $attributes
@@ -1092,6 +1093,8 @@ class Builder implements BuilderContract
     }
 
     /**
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * Save a new model and return the instance. Allow mass-assignment.
      *
      * @param  array  $attributes

@@ -312,7 +312,11 @@ trait HasRelationships
      * @param  string  $name
      * @param  string  $type
      * @param  string  $id
+<<<<<<< HEAD
      * @param  string|null  $ownerKey
+=======
+     * @param  string  $ownerKey
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo<\Illuminate\Database\Eloquent\Model, $this>
      */
     protected function morphEagerTo($name, $type, $id, $ownerKey)
@@ -352,7 +356,11 @@ trait HasRelationships
      * @param  \Illuminate\Database\Eloquent\Builder<TRelatedModel>  $query
      * @param  TDeclaringModel  $parent
      * @param  string  $foreignKey
+<<<<<<< HEAD
      * @param  string|null  $ownerKey
+=======
+     * @param  string  $ownerKey
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * @param  string  $type
      * @param  string  $relation
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo<TRelatedModel, TDeclaringModel>

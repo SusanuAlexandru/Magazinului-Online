@@ -169,7 +169,11 @@ if (! function_exists('filled')) {
 
 if (! function_exists('fluent')) {
     /**
+<<<<<<< HEAD
      * Create a Fluent object from the given value.
+=======
+     * Create an Fluent object from the given value.
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      *
      * @param  object|array  $value
      * @return \Illuminate\Support\Fluent
@@ -225,6 +229,7 @@ if (! function_exists('object_get')) {
     }
 }
 
+<<<<<<< HEAD
 if (! function_exists('laravel_cloud')) {
     /**
      * Determine if the application is running on Laravel Cloud.
@@ -238,6 +243,8 @@ if (! function_exists('laravel_cloud')) {
     }
 }
 
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
 if (! function_exists('once')) {
     /**
      * Ensures a callable is only called once, and returns the result on subsequent calls.

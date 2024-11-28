@@ -2317,7 +2317,11 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      */
     public function offsetUnset($offset): void
     {
+<<<<<<< HEAD
         unset($this->attributes[$offset], $this->relations[$offset], $this->attributeCastCache[$offset]);
+=======
+        unset($this->attributes[$offset], $this->relations[$offset]);
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
     }
 
     /**

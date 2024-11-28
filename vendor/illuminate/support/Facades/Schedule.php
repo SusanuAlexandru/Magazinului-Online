@@ -9,7 +9,10 @@ use Illuminate\Console\Scheduling\Schedule as ConsoleSchedule;
  * @method static \Illuminate\Console\Scheduling\Event command(string $command, array $parameters = [])
  * @method static \Illuminate\Console\Scheduling\CallbackEvent job(object|string $job, string|null $queue = null, string|null $connection = null)
  * @method static \Illuminate\Console\Scheduling\Event exec(string $command, array $parameters = [])
+<<<<<<< HEAD
  * @method static void group(\Closure $events)
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
  * @method static string compileArrayInput(string|int $key, array $value)
  * @method static bool serverShouldRun(\Illuminate\Console\Scheduling\Event $event, \DateTimeInterface $time)
  * @method static \Illuminate\Support\Collection dueEvents(\Illuminate\Contracts\Foundation\Application $app)
@@ -19,6 +22,7 @@ use Illuminate\Console\Scheduling\Schedule as ConsoleSchedule;
  * @method static void mixin(object $mixin, bool $replace = true)
  * @method static bool hasMacro(string $name)
  * @method static void flushMacros()
+<<<<<<< HEAD
  * @method static mixed macroCall(string $method, array $parameters)
  * @method static \Illuminate\Console\Scheduling\PendingEventAttributes withoutOverlapping(int $expiresAt = 1440)
  * @method static void mergeAttributes(\Illuminate\Console\Scheduling\Event $event)
@@ -80,6 +84,8 @@ use Illuminate\Console\Scheduling\Schedule as ConsoleSchedule;
  * @method static \Illuminate\Console\Scheduling\PendingEventAttributes yearlyOn(int $month = 1, int|string $dayOfMonth = 1, string $time = '0:0')
  * @method static \Illuminate\Console\Scheduling\PendingEventAttributes days(array|mixed $days)
  * @method static \Illuminate\Console\Scheduling\PendingEventAttributes timezone(\DateTimeZone|string $timezone)
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
  *
  * @see \Illuminate\Console\Scheduling\Schedule
  */

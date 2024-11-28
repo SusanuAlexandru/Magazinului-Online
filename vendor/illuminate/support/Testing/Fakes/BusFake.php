@@ -362,6 +362,7 @@ class BusFake implements Fake, QueueingDispatcher
     }
 
     /**
+<<<<<<< HEAD
      * Assert no chained jobs was dispatched.
      *
      * @return void
@@ -372,6 +373,8 @@ class BusFake implements Fake, QueueingDispatcher
     }
 
     /**
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * Reset the chain properties to their default values on the job.
      *
      * @param  mixed  $job
@@ -515,6 +518,7 @@ class BusFake implements Fake, QueueingDispatcher
     }
 
     /**
+<<<<<<< HEAD
      * Assert that no jobs were dispatched, chained, or batched.
      *
      * @return void
@@ -526,6 +530,8 @@ class BusFake implements Fake, QueueingDispatcher
     }
 
     /**
+=======
+>>>>>>> 237ee90fe8901cd981aeff80b2bd082edbe79ee7
      * Get all of the jobs matching a truth-test callback.
      *
      * @param  string  $command
